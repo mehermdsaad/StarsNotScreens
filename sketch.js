@@ -262,7 +262,7 @@ async function saveStarData(){
     console.log("Fetching ",constellation_name,",");
     let url = `https://api.api-ninjas.com/v1/stars?constellation=${constellation_name}`;
     
-    const response = await fetch(url,{headers:{"X-Api-Key":"Nx4R2DQskLfZE1nXDVFDnw==gxwWIOurNS9xnngY"}});
+    const response = await fetch(url,{headers:{"X-Api-Key":"DummyKEY"}});
     if(response.ok){
       const data = await response.json();
     

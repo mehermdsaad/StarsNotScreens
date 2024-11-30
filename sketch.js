@@ -23,7 +23,7 @@ const constellations_list = "Andromeda,Antlia,Apus,Aquarius,Aquila,Ara,Aries,Aur
 let starData;
 
 function preload() {
-  starData = loadJSON('unique_stars.json');
+  starData = loadJSON('stars.json');
 }
 
 
@@ -46,7 +46,7 @@ function setup() {
     let angX = random(0,180);
     let angZ = random(0,360);
     const star = new Star(Rad,angX,angZ);
-    stars.push(star);
+    // stars.push(star);
     
   }
 }

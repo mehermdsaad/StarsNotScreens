@@ -115,8 +115,8 @@ function draw() {
 //   drawLine(refX,refY,refZ,200,[0,255,255]);
 //   drawLine(upX,upY,upZ,-200,[255,255,0]);
   
-//   camera(0,0,0,focusX,focusY,focusZ,upX,upY,upZ);
-//   perspective(PI/3, width/height, 0.01, 1000);
+  camera(0,0,0,focusX,focusY,focusZ,upX,upY,upZ);
+  perspective(PI/3, width/height, 0.01, 1000);
   
   
   if(true){

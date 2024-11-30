@@ -138,7 +138,7 @@ function draw() {
   
   stars.forEach(s=>s.display());
   
-  if(false){
+  if(true){
   push();
   translate(0,0,0);
   rotateX(90*DEG);

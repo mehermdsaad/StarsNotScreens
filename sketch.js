@@ -119,7 +119,7 @@ function draw() {
   perspective(PI/3, width/height, 0.01, 1000);
   
   
-  if(true){
+  if(false){
   
   push();
 
@@ -138,7 +138,7 @@ function draw() {
   
   stars.forEach(s=>s.display());
   
-  if(true){
+  if(false){
   push();
   translate(0,0,0);
   rotateX(90*DEG);

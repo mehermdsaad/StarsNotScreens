@@ -99,6 +99,13 @@ function draw() {
   
   let angX = map(mouseDraggedX,0,width,180,0);
   let angY = map(mouseDraggedY,0,height,360,0);
+  // Convert iPad gyroscope rotations to spherical coordinates
+  // Assuming rotateX, rotateY, rotateZ are in degrees
+  if (debug) { // Only use gyro when not in debug mode
+    // Map gyroscope values to spherical coordinates
+    angX = -rotateY; // Horizontal rotation (theta)
+    angY = constrain(rotateX, -90, 90); // Vertical rotation (phi)
+  }
   
   let focusX = Math.cos(angY*DEG)*Math.cos(angX*DEG);
   let focusY = Math.sin(angY*DEG);
@@ -115,8 +122,8 @@ function draw() {
 //   drawLine(refX,refY,refZ,200,[0,255,255]);
 //   drawLine(upX,upY,upZ,-200,[255,255,0]);
   
-  // camera(0,0,0,focusX,focusY,focusZ,upX,upY,upZ);
-  // perspective(PI/3, width/height, 0.01, 1000);
+  camera(0,0,0,focusX,focusY,focusZ,upX,upY,upZ);
+  perspective(PI/3, width/height, 0.01, 1000);
   
   
   if(false){
